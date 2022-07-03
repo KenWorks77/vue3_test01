@@ -1,0 +1,94 @@
+/* main */
+#wrap {
+  #title {
+    font-size: $xxlFontSize;
+    letter-spacing: 2px;
+    padding: 20px 0 0 0;
+  }
+  #target {
+    h2 {
+      font-size: $xlFontSize;
+      letter-spacing: 2px;
+      padding-top: 10px;
+    }
+    form {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      button, select {cursor: pointer}
+      #text_radio {
+        display: flex;
+        label {
+          align-items: center;
+          background-color: #eee;
+          border: 1px dotted $mainColor;
+          border-radius: 7px;
+          color: #777;
+          display: flex;
+          justify-content: center;
+          line-height: 100%;
+          margin: 0;
+          padding: 10px;
+          width: 130px;
+          cursor: pointer;
+          &:last-child {margin-left: 10px}
+          &::before {
+            content: '●';
+            color: #777;
+          }
+        }
+        label:hover,
+        input:checked + label {
+          background-color: $white;
+          color: $mainColor;
+        }
+        input:checked + label::before {color: $linkColor}
+        input {display: none}
+      }
+    }
+    .p-group {
+      display: flex;
+      flex-wrap: wrap;
+      div.box,
+      ul.box {
+        border: 1px dotted $mainColor;
+        border-radius: 7px;
+        margin: 0 15px 20px 0;
+        padding: 15px 10px;
+        width: 180px;
+        &.cat01 {
+          background-color: azure;
+          li.category span {color: rgb(0, 255, 255);}
+        }
+        &.cat02 {background-color: beige;
+          li.category span {color: rgb(221, 221, 0);}
+        }
+        &.cat03 {background-color: rgb(238, 198, 198);
+          li.category span {color: rgb(224, 0, 0);}
+        }
+        &.cat04 {background-color: bisque;
+          li.category span {color: rgb(255, 140, 0);}
+        }
+        li {
+          &.photo {
+            padding: 5px 33px 0 33px;
+          }
+          &.name {
+            font-weight: bold;
+            font-size: $lFontSize;
+            padding: 10px 0 3px 0;
+            text-align: center;
+          }
+          &.price {
+            font-size: $sFontSize;
+            padding-bottom: 7px;
+            text-align: center;
+          }
+          &.btn {
+            padding-bottom: 15px;
+          }
+        }
+      }
+    }
+  }
+}

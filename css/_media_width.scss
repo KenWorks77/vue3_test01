@@ -1,0 +1,35 @@
+/* flexible width */
+@media screen and (min-width: $media-pc-fix){
+  .contents-w {
+    width: $media-pc-fix;
+  }
+}
+
+@media screen and (max-width: $media-pc){
+  .contents-w {
+    width: 100%;
+    margin: 0 auto;
+  }}
+
+@media screen and (max-width: $media-sp){
+  #wrap {
+    #target {
+      form {
+        display: block;
+        #text_radio {margin-top: 10px;}
+      }
+      .p-group {
+        div.box,
+        ul.box {
+          margin: 0 auto 20px auto;
+          width: 80%;
+          li.photo,
+          li.btn {
+            width: 70%;
+            margin: 0 auto;
+          }
+        }
+      }
+    } 
+  }
+}

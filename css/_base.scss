@@ -1,0 +1,71 @@
+//break point
+$media-pc-fix: 1200px;
+$media-pc: 1199px;
+$media-sp: 640px;
+
+// common color
+$mainColor: #333;
+$linkColor: #0054a7;
+$bgColor: #f9fafb;
+$white: #fff;
+
+// column color
+$color01: #1a80e0;
+
+//font-family
+$bodyFont: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, Osaka, 'MS PGothic', arial, helvetica, sans-serif;
+
+//font-size
+$baseFontSize: 15px;
+$xxlFontSize: 1.7rem;
+$xlFontSize: 1.4rem;
+$lFontSize: 1.15rem;
+$mFontSize: 1rem;
+$sFontSize: 0.9rem;
+
+html {
+  font-size: $baseFontSize;
+  overflow-y: scroll;
+  /* height: 100%; */
+}
+
+body {
+  background-color: $bgColor;
+  color: $mainColor;
+  font-family: $bodyFont;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+a {
+  color: $linkColor;
+}
+h1 {
+  margin-bottom: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  vertical-align:bottom;
+  width:100%;
+}
+#wrap {
+  margin: 0;
+  padding: 0;
+}
+.contents-w {
+  background-color: $white;
+  margin: 0 auto;
+  padding: 0 15px 20px 15px;
+}
+.bold {font-weight: bold;}
+.d-none {display: none;}
+.w100 {width: 100%!important;}
+[v-cloak] {display: none;}

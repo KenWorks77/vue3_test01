@@ -1,0 +1,247 @@
+@charset "UTF-8";
+html {
+  font-size: 15px;
+  overflow-y: scroll;
+  /* height: 100%; */
+}
+
+body {
+  background-color: #f9fafb;
+  color: #333;
+  font-family: "Hiragino Kaku Gothic ProN", "ヒラギノ角ゴ ProN W3", Meiryo, メイリオ, Osaka, "MS PGothic", arial, helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+a {
+  color: #0054a7;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  vertical-align: bottom;
+  width: 100%;
+}
+
+#wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.contents-w {
+  background-color: #fff;
+  margin: 0 auto;
+  padding: 0 15px 20px 15px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.d-none {
+  display: none;
+}
+
+.w100 {
+  width: 100% !important;
+}
+
+[v-cloak] {
+  display: none;
+}
+
+/* header */
+/* footer */
+/* main */
+#wrap #title {
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  padding: 20px 0 0 0;
+}
+
+#wrap #target h2 {
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+  padding-top: 10px;
+}
+
+#wrap #target form {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+
+#wrap #target form button, #wrap #target form select {
+  cursor: pointer;
+}
+
+#wrap #target form #text_radio {
+  display: flex;
+}
+
+#wrap #target form #text_radio label {
+  align-items: center;
+  background-color: #eee;
+  border: 1px dotted #333;
+  border-radius: 7px;
+  color: #777;
+  display: flex;
+  justify-content: center;
+  line-height: 100%;
+  margin: 0;
+  padding: 10px;
+  width: 130px;
+  cursor: pointer;
+}
+
+#wrap #target form #text_radio label:last-child {
+  margin-left: 10px;
+}
+
+#wrap #target form #text_radio label::before {
+  content: '●';
+  color: #777;
+}
+
+#wrap #target form #text_radio label:hover,
+#wrap #target form #text_radio input:checked + label {
+  background-color: #fff;
+  color: #333;
+}
+
+#wrap #target form #text_radio input:checked + label::before {
+  color: #0054a7;
+}
+
+#wrap #target form #text_radio input {
+  display: none;
+}
+
+#wrap #target .p-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#wrap #target .p-group div.box,
+#wrap #target .p-group ul.box {
+  border: 1px dotted #333;
+  border-radius: 7px;
+  margin: 0 15px 20px 0;
+  padding: 15px 10px;
+  width: 180px;
+}
+
+#wrap #target .p-group div.box.cat01,
+#wrap #target .p-group ul.box.cat01 {
+  background-color: azure;
+}
+
+#wrap #target .p-group div.box.cat01 li.category span,
+#wrap #target .p-group ul.box.cat01 li.category span {
+  color: cyan;
+}
+
+#wrap #target .p-group div.box.cat02,
+#wrap #target .p-group ul.box.cat02 {
+  background-color: beige;
+}
+
+#wrap #target .p-group div.box.cat02 li.category span,
+#wrap #target .p-group ul.box.cat02 li.category span {
+  color: #dddd00;
+}
+
+#wrap #target .p-group div.box.cat03,
+#wrap #target .p-group ul.box.cat03 {
+  background-color: #eec6c6;
+}
+
+#wrap #target .p-group div.box.cat03 li.category span,
+#wrap #target .p-group ul.box.cat03 li.category span {
+  color: #e00000;
+}
+
+#wrap #target .p-group div.box.cat04,
+#wrap #target .p-group ul.box.cat04 {
+  background-color: bisque;
+}
+
+#wrap #target .p-group div.box.cat04 li.category span,
+#wrap #target .p-group ul.box.cat04 li.category span {
+  color: darkorange;
+}
+
+#wrap #target .p-group div.box li.photo,
+#wrap #target .p-group ul.box li.photo {
+  padding: 5px 33px 0 33px;
+}
+
+#wrap #target .p-group div.box li.name,
+#wrap #target .p-group ul.box li.name {
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding: 10px 0 3px 0;
+  text-align: center;
+}
+
+#wrap #target .p-group div.box li.price,
+#wrap #target .p-group ul.box li.price {
+  font-size: 0.9rem;
+  padding-bottom: 7px;
+  text-align: center;
+}
+
+#wrap #target .p-group div.box li.btn,
+#wrap #target .p-group ul.box li.btn {
+  padding-bottom: 15px;
+}
+
+/* flexible width */
+@media screen and (min-width: 1200px) {
+  .contents-w {
+    width: 1200px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .contents-w {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  #wrap #target form {
+    display: block;
+  }
+  #wrap #target form #text_radio {
+    margin-top: 10px;
+  }
+  #wrap #target .p-group div.box,
+  #wrap #target .p-group ul.box {
+    margin: 0 auto 20px auto;
+    width: 80%;
+  }
+  #wrap #target .p-group div.box li.photo,
+  #wrap #target .p-group div.box li.btn,
+  #wrap #target .p-group ul.box li.photo,
+  #wrap #target .p-group ul.box li.btn {
+    width: 70%;
+    margin: 0 auto;
+  }
+}
