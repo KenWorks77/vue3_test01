@@ -72,21 +72,21 @@ export default defineComponent({
       }
     };
     // showInfo
-    const showInfo = function (obj, timing, catSel, sortSel) {
+    const showInfo = (obj, timing, catSel, sortSel) => {
       console.log('[Default] obj length >>> ', obj.length);
       if (catSel) {
         var searchedObj = [];
-        obj.forEach(function (objArr) {
+        obj.forEach((objArr) => {
           console.log('objArr >>>', objArr);
           let renewed = {};
           let detailsArr = [];
           let result;
-          objArr.details.forEach(function (detail) {
+          objArr.details.forEach((detail) => {
             detailsArr.push(detail);
           });
           // search
           if (timing === 'search') {
-            result = detailsArr.filter(function (target) {
+            result = detailsArr.filter((target) => {
               if (catSel === 'すべて表示') {
                 return true;
               } else {
@@ -94,12 +94,12 @@ export default defineComponent({
               }
             });
             if (sortSel === '価格が高い順') {
-              result.sort(function (a, b) {
+              result.sort((a, b) => {
                 return b.price - a.price;
               });
             }
             if (sortSel === '価格が低い順') {
-              result.sort(function (a, b) {
+              result.sort((a, b) => {
                 return a.price - b.price;
               });
             }

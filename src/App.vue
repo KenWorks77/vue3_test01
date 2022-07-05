@@ -24,13 +24,13 @@ export default defineComponent({
     const request = 'products.json';
     axios.get(request, {
       responseType: 'json'
-    }).then(function (res) {
+    }).then((res) => {
       const products = res.data;
-      Object.keys(products).forEach(function (key) {
+      Object.keys(products).forEach((key) => {
         data.obj.push(products[key]);
       });
-      console.log('loadJson action done');
-    }).catch(function (error) {
+      console.log('loadJson done');
+    }).catch((error) => {
       console.log(error);
     });
     // toThanks

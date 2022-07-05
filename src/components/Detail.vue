@@ -90,17 +90,17 @@ export default defineComponent({
       // idは正常に渡ってる
       if (id) {
         var searchedObj = [];
-        obj.forEach(function (objArr) {
+        obj.forEach((objArr) => {
           // ブラウザ直接読み込み時のみobjが入らない（obj.length = 0）
           // 必ずprops >>> loadJson >>> data.products = searchedObjの順に処理される
           // 本来はloadJson >>> props >>> data.products = searchedObjが正しい
           console.log('objArr >>>', objArr);
           let renewed = {};
           let detailsArr = [];
-          objArr.details.forEach(function (detail) {
+          objArr.details.forEach((detail) => {
             detailsArr.push(detail);
           });
-          let result = detailsArr.filter(function (target) {
+          let result = detailsArr.filter((target) => {
             if (target.id === id) {
               return true;
             }
