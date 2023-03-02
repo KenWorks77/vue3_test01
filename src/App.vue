@@ -21,6 +21,7 @@ export default defineComponent({
       submitAmount: 0
     });
     // loadJson
+    document.getElementById('loading').classList.remove('d-none');
     const request = 'products.json';
     axios.get(request, {
       responseType: 'json'
@@ -29,6 +30,8 @@ export default defineComponent({
       Object.keys(products).forEach((key) => {
         data.obj.push(products[key]);
       });
+      document.getElementById('loading').classList.add('d-none');
+      document.getElementById('target').classList.remove('d-none');
       console.log('loadJson done');
     }).catch((error) => {
       console.log(error);

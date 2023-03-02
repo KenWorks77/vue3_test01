@@ -61,7 +61,14 @@ export default defineComponent({
     });
     // load
     onMounted(() => {
+      const loadingEnd = () => {
+        document.getElementById('loading').classList.add('d-none');
+        document.getElementById('target').classList.remove('d-none');
+      }
+      document.getElementById('loading').classList.remove('d-none');
+      document.getElementById('target').classList.add('d-none');
       showInfo(obj, 'load');
+      setTimeout(loadingEnd, 300);
     });
     // searchList
     const searchList = () => {

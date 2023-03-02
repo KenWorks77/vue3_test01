@@ -86,6 +86,12 @@ export default defineComponent({
     });
     // showDetail
     const showDetail = (id) => {
+      const loadingEnd = () => {
+        document.getElementById('loading').classList.add('d-none');
+        document.getElementById('target').classList.remove('d-none');
+      }
+      document.getElementById('loading').classList.remove('d-none');
+      document.getElementById('target').classList.add('d-none');
       console.log('[Detail] obj length >>> ', obj.length);
       // idは正常に渡ってる
       if (id) {
@@ -113,6 +119,7 @@ export default defineComponent({
           detailsArr = [];
         });
         data.products = searchedObj;
+        setTimeout(loadingEnd, 300);
         console.log('products []', searchedObj);
       };
     };
@@ -128,10 +135,19 @@ export default defineComponent({
     };
     // submitForm
     const submitForm = () => {
+      const loadingEnd = () => {
+        document.getElementById('loading').classList.add('d-none');
+        document.getElementById('target').classList.remove('d-none');
+      }
+      document.getElementById('loading').classList.remove('d-none');
+      document.getElementById('target').classList.add('d-none');
+
       context.emit('thanks', data.thisName, data.thisPrice, data.thisAmount);
       document.getElementById('confirm_window').style.display = 'none';
       document.getElementById('gray_panel').style.display = 'none';
       document.getElementById('wrap').classList.remove('fixed');
+
+      setTimeout(loadingEnd, 300);
     };
     // closeWindow
     const closeWindow = () => {

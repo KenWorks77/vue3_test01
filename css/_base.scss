@@ -69,3 +69,12 @@ img {
 .d-none {display: none;}
 .w100 {width: 100%!important;}
 [v-cloak] {display: none;}
+
+#loading {
+  padding: 100px 0;
+  text-align: center;
+}
+#loading  img {
+  height:48px;
+  width: 48px;
+}

@@ -65,6 +65,16 @@ img {
   display: none;
 }
 
+#loading {
+  padding: 100px 0;
+  text-align: center;
+}
+
+#loading img {
+  height: 48px;
+  width: 48px;
+}
+
 /* header */
 /* footer */
 /* main */
