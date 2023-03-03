@@ -15,7 +15,7 @@
             <li class="photo"><img :src="'./img/' + detail.photo" :alt="detail.name"></li>
             <li class="name">{{detail.name}}</li>
             <li class="price">価格：{{detail.price.toLocaleString()}}円（税込）</li>
-            <li>
+            <li class="select">
               <form id="select_amount">
                 個数：<select id="amount" v-model="data.thisAmount">
                   <option value="1">1</option>
@@ -254,6 +254,9 @@ form#select_amount {
     margin-left: 0;
     padding-top: 0;
     width: 100%;
+  }
+  div.box ul li.select {
+    text-align: center;
   }
   #confirm_window {
     top: 50vh;
