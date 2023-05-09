@@ -79,6 +79,7 @@ export default defineComponent({
     });
     onUpdated(() => {
       const updatedId = useRoute().params.productId;
+      console.log('[Detail] updatedId >>> ', updatedId);
       if (updatedId !== data.id) {
         data.id = updatedId;
         showDetail(updatedId);
@@ -100,6 +101,7 @@ export default defineComponent({
           // ブラウザ直接読み込み時のみobjが入らない（obj.length = 0）
           // 必ずprops >>> loadJson >>> data.products = searchedObjの順に処理される
           // 本来はloadJson >>> props >>> data.products = searchedObjが正しい
+          // ！！！20230509解決！！！ main.jsでloadJsonしてprovide/injectで必ずpropsに渡せる
           console.log('objArr >>>', objArr);
           let renewed = {};
           let detailsArr = [];

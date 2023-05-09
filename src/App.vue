@@ -7,34 +7,18 @@
 </template>
 
 <script>
-import {defineComponent, reactive} from 'vue';
-import axios from 'axios';
+import {defineComponent, reactive, inject} from 'vue';
 import Detail from './components/Detail.vue';
 
 export default defineComponent({
   components: Detail,
   setup() {
     const data = reactive({
-      obj: [],
+      // main.jsでloadJsonしてprovideしたobjArrをinjectして取得
+      obj: inject('objArr'),
       submitName: '商品名',
       submitPrice: 0,
       submitAmount: 0
-    });
-    // loadJson
-    document.getElementById('loading').classList.remove('d-none');
-    const request = 'products.json';
-    axios.get(request, {
-      responseType: 'json'
-    }).then((res) => {
-      const products = res.data;
-      Object.keys(products).forEach((key) => {
-        data.obj.push(products[key]);
-      });
-      document.getElementById('loading').classList.add('d-none');
-      document.getElementById('target').classList.remove('d-none');
-      console.log('loadJson done');
-    }).catch((error) => {
-      console.log(error);
     });
     // toThanks
     const toThanks = (name, price, amount) => {
